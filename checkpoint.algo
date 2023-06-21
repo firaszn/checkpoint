@@ -1,0 +1,82 @@
+FUNCTION dot_product(ps REAL) : REAL
+VAR v1, v2: ARRAY[1..N] OF REAL 
+ i: INTEGER
+ BEGIN 
+ps := 0
+FOR i := 1 TO N DO 
+ps := ps + (v1[i] * v2[i]) 
+ END FOR
+ RETURN ps ;
+END dot_product 
+
+
+
+ALGORITHM determine_orthogonal_vectors
+ VAR n: INTEGER 
+  v1, v2: ARRAY[1..N] OF REAL 
+   i: INTEGER
+   dot_product(v1, v2, ps)  ;
+
+IF ps = 0 THEN
+  write("Vector  ", i, " is orthogonal")
+ELSE
+  write("Vector  ", i, " is not orthogonal")
+END IF
+
+END FOR
+
+END
+
+PROCEDURE dot_product(v1, v2: ARRAY[1..N] OF REAL; VAR ps: REAL) 
+BEGIN 
+ write("Enter the number of vector  (n):") 
+ read(n)
+FOR i := 1 TO n DO 
+ write("Enter vector  ", i, ":")
+  write("Vector 1:")  
+  END FOR
+  write("Vector 2:")
+FOR j := 1 TO N DO
+  read(v2[j])
+END FOR
+
+
+
+
+
+
+
+
+
+ALGORITHM insertion_sort
+VAR
+ arr: ARRAY[1..N] OF INTEGER 
+ i, j, key: INTEGER
+
+BEGIN
+ write("Enter the size of the array (N):")
+ read(N)
+
+ write("Enter the elements of the array:")
+
+FOR i := 1 TO N DO
+ read(arr[i])
+END FOR
+
+FOR i := 2 TO N DO
+ key := arr[i] 
+ j := i - 1
+ 
+ WHILE j > 0 AND arr[j] > key DO
+  arr[j + 1] := arr[j]
+  j := j + 1
+END WHILE
+
+ arr[j + 1] := key  
+END FOR
+
+ write("Sorted array:")
+FOR i := 1 TO N DO
+ write(arr[i])
+END FOR
+END
